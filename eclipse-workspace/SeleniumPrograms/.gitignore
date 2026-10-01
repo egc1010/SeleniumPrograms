@@ -1,0 +1,18 @@
+# Eclipse
+.settings/
+.classpath
+.project
+
+# Maven / Compilación
+target/
+test-output/
+
+# Logs y temporales
+*.log
+.DS_Store
+
+# Paquetes o carpetas específicas que quiero ignorar
+/src/p1
+/src/p2
+/bin/p1
+/bin/p2
