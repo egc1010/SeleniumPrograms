@@ -24,6 +24,7 @@ public class TestPrueba {
     
     private WebDriver driver;
     private LoginPageSauce loginSauce; 
+    private InventoryPage tienda;
     
   @Parameters({"Browser"}) 
     @BeforeMethod
@@ -60,7 +61,7 @@ public class TestPrueba {
   @Test
   public void estoyEnLaTienda() {
 	  
-	    InventoryPage tienda = new InventoryPage(driver);
+	     tienda = new InventoryPage(driver);
 	    Assert.assertEquals(tienda.obtenerTextoEtiquetaInventory(), "Products", "No esta en productos");
 
 	  
@@ -72,7 +73,7 @@ public class TestPrueba {
     public void probar2Elementos() {
     	
     	// 1. Instanciamos la página
-        InventoryPage tienda = new InventoryPage(driver);
+         tienda = new InventoryPage(driver);
         
         // 2. Validación de inicio (Misma lógica: busca que el tamaño sea 0)
         Assert.assertEquals(tienda.obtenerVisibilidadCarrito(), 0, "Debe ser vacio al inicio");
@@ -93,7 +94,7 @@ public class TestPrueba {
     @Test
     public void testAgregarTodosLosArticulos() {
         // 2. CREAMOS EL OBJETO: Instanciamos la página pasándole nuestro driver activo
-        InventoryPage tienda = new InventoryPage(driver);
+         tienda = new InventoryPage(driver);
         
         // 3. OBTENEMOS LOS DATOS: Le preguntamos a la página cuántos artículos ve
         int totalArticulos = tienda.obtenerCantidadDeArticulos();
