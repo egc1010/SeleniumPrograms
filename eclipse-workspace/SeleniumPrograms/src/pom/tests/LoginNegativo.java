@@ -46,6 +46,12 @@ public class LoginNegativo {
             driver = new FirefoxDriver(firefoxOptions);
         }
         
+        else {
+        	throw new IllegalArgumentException("no se encontró el navegador "+browserName);
+        	
+        }
+  
+        
     	    
         // Tu preparación de siempre: abre el navegador y hace el Login
         
@@ -58,7 +64,7 @@ public class LoginNegativo {
         Assert.assertEquals(loginSauce.obtenerTextoBotonLogin(), "Login", "No cargó la página de inicio");
         System.out.println("¡Confirmado! El navegador abrió la pantalla de login con éxito.");
         
-    }
+}  
   @Test
   public void validarLoginConCredencialesInvalidas() {
 	  
@@ -77,3 +83,4 @@ public class LoginNegativo {
         }
     }
 }
+

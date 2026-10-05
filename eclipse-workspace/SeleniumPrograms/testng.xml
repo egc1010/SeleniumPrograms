@@ -3,7 +3,7 @@
 <suite name="Suite">
   
   <test name="Testing on firefox">
-    <parameter name="Browser" value="chrome"></parameter>
+    <parameter name="Browser" value="firefox"></parameter>
     <classes>
       <class name="pom.tests.LoginNegativo"/>
     </classes>
@@ -12,7 +12,7 @@
     <test name="Testing on chrome">
     <parameter name="Browser" value="chrome"></parameter>
     <classes>
-      <class name="pom.tests.TestPrueba"/>
+      <class name="pom.tests.LoginNegativo"/>
     </classes>
   </test> <!-- Test -->
   
